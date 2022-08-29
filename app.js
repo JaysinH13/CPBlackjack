@@ -50,19 +50,12 @@ while (promptLoop == true) {
 
   console.log(cardNum2 + " of " + suits[random]);
 
-  if (cardNum2 && cardNum1 == "Jack") {
+  if (cardNum1 == "King" || cardNum1 == "Queen" || cardNum1 == "Jack") {
     cardNum1 = 10
+};
+  if (cardNum2 == "King" || cardNum2 == "Queen" || cardNum2 == "Jack") {
     cardNum2 = 10
-  };
-  if (cardNum2 && cardNum1 == "Queen") {
-    cardNum1 = 10
-    cardNum2 = 10
-  };
-  if (cardNum2 && cardNum1 == "King") {
-    cardNum1 = 10
-    cardNum2 = 10
-  };
-
+};
   var cardTotal = cardNum1 + cardNum2
 
   console.log(`You have a total of ${cardTotal}`);
