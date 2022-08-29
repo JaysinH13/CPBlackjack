@@ -62,3 +62,39 @@ while (promptLoop == true) {
 
   break;
 }
+
+
+
+var returnChoice2 = prompt("Hit or Stand?")
+
+if (returnChoice2 == "hit" || returnChoice2 == "Hit") {
+  let cardNum3 = Math.floor(Math.random() * 13) + 1;
+  if (cardNum3 == 11) {
+    cardNum3 = "Jack"
+  };
+  if (cardNum3 == 12) {
+    cardNum3 = "Queen"
+  };
+  if (cardNum3 == 13) {
+    cardNum3 = "King"
+  };
+  var random = Math.floor(Math.random() * suits.length);
+  console.log(cardNum3 + " of " + suits[random]);
+  if (cardNum3 == "King" || cardNum3 == "Queen" || cardNum3 == "Jack") {
+    cardNum3 = 10
+  };
+
+  cardTotal2 = cardNum3 + cardTotal
+
+
+  if (cardTotal2 > 21) {
+    console.log(`You went over with a ${cardTotal2}`);
+  } else {
+    console.log(`You ended with a ${cardTotal2}`);
+  }
+} else if (returnChoice2 == "stand" && "Stand") {
+  randomDealerNum = Math.floor(Math.random() * 5) + 17;
+  console.log(`The dealer has: ${randomDealerNum}`);
+} else {
+
+};
