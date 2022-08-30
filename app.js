@@ -2,6 +2,7 @@ const prompt = require('prompt-sync')();
 let promptLoop = false;
 
 var returnChoice = prompt('Would you like to play blacjack? y/n? ')
+var randomDealerNum = ""
 
 switch (returnChoice) {
   case 'y':
